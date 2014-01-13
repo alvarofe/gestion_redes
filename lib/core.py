@@ -23,7 +23,6 @@ def run_command(command):
         results = 'Error'
     return results
 def check_hosts():
-    ''' Checks each host to see if it's running '''
     try:
     	global active_hosts
     	for host, result in execute(run_command, "uptime", hosts=env.hosts).iteritems():
